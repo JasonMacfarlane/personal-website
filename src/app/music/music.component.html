@@ -1,0 +1,59 @@
+<main id="main" class="main">
+  <div class="main__content main__content--music">
+    <nav id="subnav" class="main__content__nav">
+      <ul>
+        <li><button (click)="scrollService.scrollTo('compositions')" [appGa]="['click', 'Subnav', 'Music: Compositions']">Compositions</button></li>
+        <li><button (click)="scrollService.scrollTo('covers')" [appGa]="['click', 'Subnav', 'Music: Covers ']">Covers</button></li>
+      </ul>
+    </nav>
+
+    <section class="section section--vcenter section--full">
+      <header id="section-header" class="section__header">
+        <h1 class="h1">Music</h1>
+        <h2 class="h2">Playing the piano for <strong>over 15 years</strong>, and recently started composing. Occasionally, I'll upload a composition or cover to YouTube.</h2>
+        <div class="section__header__btn section__header__btn--youtube">
+          <a [appGa]="['click', 'YouTube', 'https://www.youtube.com/channel/UC17vXvjwdOFymoNEh69sDww']" href="https://www.youtube.com/channel/UC17vXvjwdOFymoNEh69sDww" target="_blank">
+            <fa-icon [icon]="['fab', 'youtube']" class="section__header__btn__icon"></fa-icon>
+            YouTube
+          </a>
+        </div>
+      </header>
+
+      <app-scroll-arrow></app-scroll-arrow>
+    </section>
+
+    <section id="compositions" class="section">
+      <header class="section__header">
+        <h1 class="h1">Compositions</h1>
+      </header>
+
+      <p *ngIf="compositionsErr">{{ compositionsErr }}</p>
+
+      <div class="videos">
+        <div class="videos__item" *ngFor="let item of compositionItems">
+          <h2 class="h2">{{ item.title }}</h2>
+          <div class="videos__item__video">
+            <iframe width="560" height="315" [src]="item.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="covers" class="section">
+      <header class="section__header">
+        <h1 class="h1">Covers</h1>
+      </header>
+
+      <p *ngIf="coversErr">{{ coversErr }}</p>
+
+      <div class="videos">
+        <div class="videos__item" *ngFor="let item of coverItems">
+          <h2 class="h2">{{ item.title }}</h2>
+          <div class="videos__item__video">
+            <iframe width="560" height="315" [src]="item.url" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

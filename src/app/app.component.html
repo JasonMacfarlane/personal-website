@@ -1,0 +1,17 @@
+<div id="root" [class]="rootClass" [@routeAnimations]="prepareRoute(outlet)">
+  <app-header class="header"></app-header>
+
+  <div [class]="bgClass" [style.opacity]="scrollService.getBackgroundOpacity()"></div>
+
+  <div #scroll class="scroll" (scroll)="onScroll($event)">
+    <router-outlet #outlet="outlet" (activate)="onActivate($event)"></router-outlet>
+
+    <footer class="footer" *ngIf="showFooter">
+      <div class="footer__content">
+        <div class="footer__section">
+          <p>Jason Macfarlane © 2019</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<a routerLink="/" class="header__name" [appGa]="['click', 'Nav', 'Home']">Jason Macfarlane</a>
+<button class="header__hamburger" (click)="toggleNav()">
+  <fa-icon class="header__hamburger__icon" [icon]="['fas', 'bars']" *ngIf="!showNav"></fa-icon>
+  <fa-icon class="header__hamburger__icon" [icon]="['fas', 'times']" *ngIf="showNav"></fa-icon>
+</button>
+
+<nav class="nav" [ngClass]="{'nav--show' : showNav}">
+  <ul class="nav__ul">
+    <li class="nav__li"><a routerLink="/developer" [appGa]="['click', 'Nav', 'Developer']" (click)="collapseNav()">Developer</a></li>
+    <li class="nav__li"><a routerLink="/music" [appGa]="['click', 'Nav', 'Music']" (click)="collapseNav()">Music</a></li>
+    <li class="nav__li nav__li--icon"><a href="mailto:jason@webcode.tools" [appGa]="['click', 'Nav', 'Contact']" (click)="collapseNav()">
+        <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+      </a></li>
+    <li class="nav__li nav__li--icon"><a href="https://github.com/jasonmacfarlane" target="_blank" [appGa]="['click', 'Nav', 'GitHub']" (click)="collapseNav()">
+        <fa-icon [icon]="['fab', 'github']"></fa-icon>
+      </a></li>
+    <li class="nav__li nav__li--icon"><a href="https://www.linkedin.com/in/jason-macfarlane/" target="_blank" [appGa]="['click', 'Nav', 'LinkedIn']" (click)="collapseNav()">
+        <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
+      </a></li>
+    <li class="nav__li nav__li--icon"><a href="https://www.producthunt.com/@jason_macfarlane/made" target="_blank" [appGa]="['click', 'Nav', 'Product Hunt']" (click)="collapseNav()">
+        <fa-icon [icon]="['fab', 'product-hunt']"></fa-icon>
+      </a></li>
+  </ul>
+</nav>

@@ -1,0 +1,241 @@
+<main id="main" class="main">
+  <div class="main__content main__content--developer">
+    <nav id="subnav" class="main__content__nav">
+      <ul>
+        <li><button (click)="scrollService.scrollTo('projects')" [appGa]="['click', 'Subnav', 'Developer: Projects']">Projects</button></li>
+        <li><button (click)="scrollService.scrollTo('skills')" [appGa]="['click', 'Subnav', 'Developer: Skills']">Skills</button></li>
+      </ul>
+    </nav>
+
+    <section class="section section--vcenter section--full">
+      <header id="section-header" class="section__header">
+        <h1 class="h1">Developer</h1>
+        <h2 class="h2">I’m a <strong>full-stack web developer</strong> with over <strong>10 years experience</strong>. My current toolset includes <span class="text-standout">Angular</span>, <span class="text-standout">Node.js</span>, <span class="text-standout">TypeScript</span>
+          and related technologies.</h2>
+      </header>
+
+      <app-scroll-arrow></app-scroll-arrow>
+    </section>
+
+    <section id="projects" class="section">
+      <header class="section__header">
+        <h1 class="h1">Projects</h1>
+      </header>
+
+      <div class="project-group">
+        <div class="project project--rankgen" (click)="modalService.open(modalRankGen)" [appGa]="['click', 'Projects', 'Rank Gen']">
+          <img class="project__logo" src="assets/img/rankgen-logo.png" alt="Rank Gen logo">
+
+          <app-modal #modalRankGen>
+            <header class="modal__header">
+              <img class="modal__logo" src="assets/img/rankgen-logo.png" alt="Rank Gen logo">
+              <ul class="project__social">
+                <li>Share on</li>
+                <li [appGa]="['share', 'Projects: Rank Gen', 'Facebook']" [appSocialShare]="['facebook', 'https://rankgen.com']">
+                  <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                </li>
+                <li [appGa]="['share', 'Projects: Rank Gen', 'Twitter']" [appSocialShare]="['twitter', 'https://rankgen.com', 'Get an SEO score for your website. View suggestions on how to improve your on-page SEO.']">
+                  <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                </li>
+                <li [appGa]="['share', 'Projects: Rank Gen', 'Email']" [appSocialShare]="['email', 'https://rankgen.com', 'Get an SEO score for your website. View suggestions on how to improve your on-page SEO. Analyze HTML, files (sitemap, robots, etc), social media profiles, page speed, usability, security and more.']">
+                  <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+                </li>
+              </ul>
+              <h2 class="h2">Get an SEO score for your website. View suggestions on how to improve your on-page SEO.</h2>
+              <a class="modal__btn" href="https://rankgen.com" target="_blank" [appGa]="['click', 'Projects: Rank Gen', 'rankgen.com']">Try it now</a>
+            </header>
+
+            <img class="modal__hero" src="assets/img/rankgen-hero.png" alt="">
+          </app-modal>
+        </div>
+
+        <div class="project project--webcodetools" (click)="modalService.open(modalWebCodeTools)" [appGa]="['click', 'Projects', 'Web Code Tools']">
+          <img class="project__logo" src="assets/img/webcodetools-logo.png" alt="Web Code Tools logo">
+
+          <app-modal #modalWebCodeTools>
+            <header class="modal__header">
+              <img class="modal__logo" src="assets/img/webcodetools-logo.png" alt="Web Code Tools logo">
+              <ul class="project__social">
+                <li>Share on</li>
+                <li [appGa]="['share', 'Projects: Web Code Tools', 'Facebook']" [appSocialShare]="['facebook', 'https://webcode.tools']">
+                  <fa-icon [icon]="['fab', 'facebook']"></fa-icon>
+                </li>
+                <li [appGa]="['share', 'Projects: Web Code Tools', 'Twitter']" [appSocialShare]="['twitter', 'https://webcode.tools', 'Website code generator for web developers. Generate HTML, CSS, Twitter Card and Open Graph tags, and Structured Data (Microdata and JSON-LD).']">
+                  <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
+                </li>
+                <li [appGa]="['share', 'Projects: Web Code Tools', 'Email']" [appSocialShare]="['email', 'https://webcode.tools', 'Generate HTML, CSS, Twitter Card and Open Graph tags, and Structured Data (Microdata and JSON-LD), to get the most out of your website to improve on-page SEO and overall user experience.']">
+                  <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+                </li>
+              </ul>
+              <h2 class="h2">Website code generator for web developers. Generate HTML, CSS, Twitter Card and Open Graph tags, and Structured Data (Microdata and JSON-LD), to get the most out of your website to improve on-page SEO and overall user
+                experience.
+              </h2>
+              <a class="modal__btn" href="https://webcode.tools" target="_blank" [appGa]="['click', 'Projects', 'Web Code Tools: webcode.tools']">Try it now</a>
+            </header>
+
+            <img class="modal__hero" src="assets/img/webcodetools-hero.png" alt="">
+
+            <h2 class="h2">Featured on:</h2>
+
+            <ul class="list">
+              <li><strong><a href="https://www.producthunt.com/posts/web-code-tools-2" target="_blank" [appGa]="['click', 'Projects: Web Code Tools', 'producthunt.com']">Product Hunt</a>:</strong>&nbsp;<span class="text-standout">#1 Product of the
+                  day</span>
+                on
+                May 21, 2017.</li>
+              <li><strong><a href="https://envato.com/blog/best-sites-find-css-snippets-inspiration/" target="_blank" [appGa]="['click', 'Projects: Web Code Tools', 'envato.com']">Envato Blog</a>:</strong>&nbsp;“As a resource for CSS snippets you
+                have to check
+                out Web Code Tools. This site offers custom CSS3
+                code generators to save you time building gradients, filters, and pure CSS animations. If you’re
+                looking for a quality resource to find CSS & frontend snippets then <span class="text-standout">Web Code Tools is a must-bookmark site</span>.”</li>
+              <li><strong><a href="http://webdesignerdepot.com/2015/06/50-incredible-freebies-for-web-designers-june-2015/" target="_blank" [appGa]="['click', 'Projects: Web Code Tools', 'webdesignerdepot.com']">Web Designer Depot</a>:</strong>&nbsp;“This
+                online
+                tool helps you generate CSS3, HTML5, microdata, open graph
+                and Twitter, which you can later use on your website.”</li>
+              <li><strong><a href="http://webcodegeeks.com/html5/html5-css3-code-generator-tools-list/" target="_blank" [appGa]="['click', 'Projects: Web Code Tools', 'webcodegeeks.com']">Web Code Geeks</a>:</strong>&nbsp;“Web Code Tools is a
+                website that
+                offers
+                seamless code generation of elements in HTML5 after you
+                give certain attributes to create your customized preset of buttons, text, tags and more.”</li>
+            </ul>
+          </app-modal>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <header class="section__header">
+        <h1 class="h1">Skills</h1>
+      </header>
+
+      <div class="skills">
+        <div class="skills__col">
+          <h2 class="h2">Languages</h2>
+
+          <ul class="skills__list">
+            <li class="skills__item">
+              <span>HTML</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>CSS</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>SCSS</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>JavaScript</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>PHP</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>MySQL</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>Java</span>
+              <span>
+                <app-star [level]="4"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>C#</span>
+              <span>
+                <app-star [level]="4"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>C</span>
+              <span>
+                <app-star [level]="4"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>Ruby</span>
+              <span>
+                <app-star [level]="3"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>Swift</span>
+              <span>
+                <app-star [level]="3"></app-star>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skills__col">
+          <h2 class="h2">Frameworks &amp; Libraries</h2>
+
+          <ul class="skills__list">
+            <li class="skills__item">
+              <span>Angular</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>Node.js</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>JQuery</span>
+              <span>
+                <app-star [level]="5"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>Restify</span>
+              <span>
+                <app-star [level]="4"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>ASP.NET</span>
+              <span>
+                <app-star [level]="4"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>AngularJS</span>
+              <span>
+                <app-star [level]="4"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>React</span>
+              <span>
+                <app-star [level]="3"></app-star>
+              </span>
+            </li>
+            <li class="skills__item">
+              <span>Ruby on Rails</span>
+              <span>
+                <app-star [level]="3"></app-star>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
