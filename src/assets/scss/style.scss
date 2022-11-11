@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts';
+
+:root {
+  @apply bg-black font-sans text-base;
+}
+
+body {
+  @apply text-white;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-mono;
+
+  &:last-child {
+    @apply mb-0;
+  }
+}
+
+h1 {
+  @apply font-bold text-5xl;
+
+  @screen md {
+    @apply text-7xl;
+  }
+}
+
+h2 {
+  @apply block font-medium text-sky-500 text-3xl tracking-wide uppercase;
+}
+
+h3 {
+  @apply font-bold text-sky-500;
+}
+
+p,
+.list {
+  @apply mb-5 last:mb-0;
+
+  @screen md {
+    @apply mb-6;
+  }
+}
+
+.list {
+  @apply list-disc ml-4;
+}
+
+.link {
+  @apply font-bold relative;
+
+  &::after {
+    @apply absolute bottom-0 bg-sky-500 left-1/2 duration-300 h-[0.125em] -translate-x-1/2 scale-x-90 w-full;
+
+    content: '';
+  }
+
+  &:hover::after {
+    @apply scale-x-100;
+  }
+}
+
+mark {
+  @apply bg-sky-900 px-1 text-white;
+}
+
+.container {
+  @apply px-6;
+
+  @screen md {
+    @apply px-28;
+  }
+}
+
+.header {
+  @apply mb-16;
+
+  @screen md {
+    @apply mb-20;
+  }
+}
