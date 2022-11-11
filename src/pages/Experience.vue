@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppTimeline from '../components/AppTimeline.vue';
+import AppTimeline from '../components/AppTimeline.vue'
 </script>
 
 <template>

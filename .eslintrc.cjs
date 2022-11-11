@@ -24,6 +24,11 @@ module.exports = {
     'eol-last': ['error', 'always'],
     'max-len': ['error', { code: 450 }],
     'space-before-function-paren': ['error', 'always'],
+    semi: ['error', 'never'],
+
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: true,
+    }],
 
     'vue/html-indent': ['error', 2, {
       attribute: 1,
@@ -60,4 +65,4 @@ module.exports = {
       },
     },
   ],
-};
+}

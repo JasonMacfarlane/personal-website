@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const socialLinks = ref([
   {
@@ -26,7 +26,7 @@ const socialLinks = ref([
     target: '_blank',
     icon: 'fa-brands fa-product-hunt',
   },
-]);
+])
 </script>
 
 <template>

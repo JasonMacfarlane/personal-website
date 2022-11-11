@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { Ref } from 'vue';
-import type { Timeline } from '../types/Timeline';
+import { ref } from 'vue'
+import type { Ref } from 'vue'
+import type { Timeline } from '../types/Timeline'
 
 const timeline: Ref<Timeline> = ref([
   {
@@ -116,7 +116,7 @@ const timeline: Ref<Timeline> = ref([
       </ul>
     `,
   },
-]);
+])
 </script>
 
 <template>

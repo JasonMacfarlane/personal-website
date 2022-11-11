@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppTopBar from './components/AppTopBar.vue';
+import AppTopBar from './components/AppTopBar.vue'
 </script>
 
 <template>

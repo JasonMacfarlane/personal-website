@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { ref, watch, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 
 function isMobile () {
-  return window.innerWidth <= 768;
+  return window.innerWidth <= 768
 }
 
 const links = ref([
@@ -15,26 +15,26 @@ const links = ref([
     title: 'Experience',
     to: '/experience',
   },
-]);
+])
 
-const isMenuOpen = ref(false);
+const isMenuOpen = ref(false)
 
 function toggleMenu () {
-  isMenuOpen.value = !isMenuOpen.value;
+  isMenuOpen.value = !isMenuOpen.value
 }
 
-const route = useRoute();
+const route = useRoute()
 watch(route, () => {
-  if (isMobile()) isMenuOpen.value = false;
-});
+  if (isMobile()) isMenuOpen.value = false
+})
 
 onMounted(() => {
-  if (!isMobile()) isMenuOpen.value = true;
-});
+  if (!isMobile()) isMenuOpen.value = true
+})
 
 window.onresize = () => {
-  isMenuOpen.value = !isMobile();
-};
+  isMenuOpen.value = !isMobile()
+}
 </script>
 
 <template>

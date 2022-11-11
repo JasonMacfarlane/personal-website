@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppIntro from '../components/AppIntro.vue';
+import AppIntro from '../components/AppIntro.vue'
 </script>
 
 <template>
