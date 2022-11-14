@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import SocialLinks from './SocialLinks.vue'
 
 function isMobile () {
   return window.innerWidth <= 768
 }
 
-const links = ref([
+const links = [
   {
     title: 'About',
     to: '/',
@@ -15,7 +16,7 @@ const links = ref([
     title: 'Experience',
     to: '/experience',
   },
-])
+]
 
 const isMenuOpen = ref(false)
 
@@ -35,11 +36,20 @@ onMounted(() => {
 window.onresize = () => {
   isMenuOpen.value = !isMobile()
 }
+
+const topbarScroll = ref(false)
+
+window.onscroll = () => {
+  topbarScroll.value = window.scrollY > 5
+}
 </script>
 
 <template>
   <Suspense>
-    <div class="topbar">
+    <div
+      class="topbar"
+      :class="{ 'topbar--scroll': topbarScroll }"
+    >
       <div class="topbar__inner">
         <router-link
           class="topbar__signature"
@@ -52,6 +62,8 @@ window.onresize = () => {
         </router-link>
 
         <nav class="topbar__nav">
+          <SocialLinks class="topbar__social" />
+
           <ul class="topbar__menu" :aria-hidden="!isMenuOpen">
             <li
               v-for="(item, index) of links"
@@ -65,7 +77,7 @@ window.onresize = () => {
 
           <a
             class="topbar__nav-btn"
-            href="/resume.pdf"
+            href="/Resume%20%E2%80%93%C2%A0Jason%20Macfarlane.pdf"
             target="_blank"
           >
             Résumé
@@ -79,6 +91,7 @@ window.onresize = () => {
           >
             <font-awesome-icon
               :icon="`fa-solid ${isMenuOpen ? 'fa-xmark' : 'fa-bars'}`"
+              size="xl"
               fixed-width
             />
           </button>
@@ -90,12 +103,31 @@ window.onresize = () => {
 
 <style scoped lang="scss">
 .topbar {
-  @apply bg-black bg-opacity-50 left-0 px-6 py-3 sticky top-0 w-full z-50;
+  @apply h-[64px] opacity-0 px-6 py-3 relative sticky top-0 z-50;
 
-  backdrop-filter: blur(100px);
+  animation: topbarIn 1s ease 0s 1 normal forwards;
+  transform: translateY(-0.5em);
+
+  &--scroll {
+    @apply bg-black bg-opacity-40;
+
+    backdrop-filter: blur(50px);
+  }
 
   @screen md {
-    @apply fixed px-10 py-6;
+    @apply h-[88px] px-10 py-6;
+  }
+}
+
+@keyframes topbarIn {
+  0% {
+    @apply opacity-0;
+    transform: translateY(-0.5em);
+  }
+
+  100% {
+    @apply opacity-100;
+    transform: translateY(0);
   }
 }
 
@@ -119,7 +151,15 @@ window.onresize = () => {
   @apply flex gap-6;
 
   @screen md {
-    @apply gap-8;
+    @apply gap-20;
+  }
+}
+
+.topbar__social {
+  @apply hidden;
+
+  @screen lg {
+    @apply flex items-center gap-x-10 text-xl;
   }
 }
 

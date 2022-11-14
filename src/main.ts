@@ -1,13 +1,7 @@
 import { createApp } from 'vue'
 import './assets/scss/style.scss'
-import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Pages
-import About from './pages/About.vue'
-import Experience from './pages/Experience.vue'
-
-// Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
@@ -28,6 +22,11 @@ import {
   faProductHunt,
 } from '@fortawesome/free-brands-svg-icons'
 
+import App from './App.vue'
+
+import About from './pages/About.vue'
+import Experience from './pages/Experience.vue'
+
 library.add(
   // Solid
   faBars,
@@ -42,7 +41,7 @@ library.add(
   // Brands
   faGithub,
   faLinkedin,
-  faProductHunt
+  faProductHunt,
 )
 
 const routes = [

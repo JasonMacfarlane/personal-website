@@ -6,16 +6,30 @@ import AppTopBar from './components/AppTopBar.vue'
   <AppTopBar />
 
   <main class="main">
-    <router-view />
+    <Transition name="fade">
+      <router-view />
+    </Transition>
   </main>
 </template>
 
 <style scoped lang="scss">
 .main {
-  @apply max-w-[1500px] mx-auto pb-16 pt-8;
+  @apply flex flex-1;
 
-  @screen md {
-    @apply py-32;
-  }
+  animation: fadeIn 1s ease 0ms 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

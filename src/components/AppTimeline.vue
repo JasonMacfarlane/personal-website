@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { Ref } from 'vue'
 import type { Timeline } from '../types/Timeline'
 
-const timeline: Ref<Timeline> = ref([
+const timeline: Timeline = [
   {
     place: 'Spring Financial',
     title: 'Front-end Engineer',
     date: 'May 2021 – Present',
     location: 'Vancouver, BC (remote)',
-    note: 'Subsidiary of Canada Drives Group, Spring Financial offers Canadians personal loans and credit building products. Our goal is to offer Canadians financial products in the easiest, quickest way.',
+    note: 'Subsidiary of Canada Drives Group, Spring Financial offers personal loans and credit building products to Canadians. Our goal is to offer financial products in the easiest, quickest&nbsp;way.',
     links: [
       {
         href: 'https://springfinancial.ca',
@@ -46,7 +44,7 @@ const timeline: Ref<Timeline> = ref([
         name: 'webcode.tools',
       },
     ],
-    note: 'Website code generator for beginning web developers or anyone who needs a reminder on syntax.',
+    note: 'Website code generator for beginning web developers or anyone who needs a reminder on&nbsp;syntax.',
     content: `
       <p>Developed and designed a web code generator for beginning web developers to learn HTML, CSS and Schema.org markup to improve <mark>SEO</mark> and user experience.</p>
       <ul class="list">
@@ -106,7 +104,7 @@ const timeline: Ref<Timeline> = ref([
         icon: 'fa-brands fa-github',
       },
     ],
-    note: 'Store closed due to not having enough time to run it. Code is open-source.',
+    note: 'Store closed due to not having enough time to run it. Code is&nbsp;open-source.',
     content: `
       <p>Designed and developed a Shopify store selling personalized wallet phone cases. Used Angular, Angular Material and the <mark>Shopify JS SDK</mark>, <mark>Shopify Admin GraphQL API</mark> and the <mark>Shopify Storefront API</mark>. This approach allowed for maximum flexibility, like custom checkout pages and tailored landing pages based on the user’s interests from targeted ads.</p>
       <ul class="list">
@@ -116,7 +114,7 @@ const timeline: Ref<Timeline> = ref([
       </ul>
     `,
   },
-])
+]
 </script>
 
 <template>
@@ -170,7 +168,7 @@ const timeline: Ref<Timeline> = ref([
             icon="fa-solid fa-comment"
             fixed-width
           />
-          {{ item.note }}
+          <span v-html="item.note" />
         </div>
       </div>
 
@@ -202,7 +200,7 @@ const timeline: Ref<Timeline> = ref([
 
   a {
     > span {
-      @apply font-bold relative;
+      @apply font-bold inline-block relative;
 
       &::after {
         @apply absolute bottom-0 bg-sky-500 left-1/2 duration-300 h-[0.125em] -translate-x-1/2 scale-x-90 w-full;

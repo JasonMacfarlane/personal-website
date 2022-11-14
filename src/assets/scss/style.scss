@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  @apply block font-medium text-sky-500 text-3xl tracking-wide uppercase;
+  @apply block font-bold text-sky-500 text-3xl tracking-wide uppercase;
 }
 
 h3 {
@@ -47,12 +47,36 @@ p,
   }
 }
 
+mark {
+  @apply bg-sky-900 px-1 text-white;
+}
+
+.app {
+  @apply flex flex-col min-h-screen;
+}
+
+.section {
+  @apply pb-20 pt-8;
+}
+
+.container {
+  @apply max-w-[1500px] mx-auto px-6 w-full;
+
+  @screen md {
+    @apply px-10;
+  }
+
+  @screen lg {
+    @apply px-28;
+  }
+}
+
 .list {
   @apply list-disc ml-4;
 }
 
 .link {
-  @apply font-bold relative;
+  @apply font-bold inline-block relative;
 
   &::after {
     @apply absolute bottom-0 bg-sky-500 left-1/2 duration-300 h-[0.125em] -translate-x-1/2 scale-x-90 w-full;
@@ -65,20 +89,8 @@ p,
   }
 }
 
-mark {
-  @apply bg-sky-900 px-1 text-white;
-}
-
-.container {
-  @apply px-6;
-
-  @screen md {
-    @apply px-28;
-  }
-}
-
 .header {
-  @apply mb-16;
+  @apply mb-12;
 
   @screen md {
     @apply mb-20;

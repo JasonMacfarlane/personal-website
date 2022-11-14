@@ -1,100 +1,43 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const socialLinks = ref([
-  {
-    title: 'Email me',
-    href: 'mailto:jasonmac5@gmail.com',
-    target: '_self',
-    icon: 'fa-solid fa-envelope',
-  },
-  {
-    title: 'GitHub',
-    href: 'https://github.com/jasonmacfarlane',
-    target: '_blank',
-    icon: 'fa-brands fa-github',
-  },
-  {
-    title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/jason-macfarlane/',
-    target: '_blank',
-    icon: 'fa-brands fa-linkedin',
-  },
-  {
-    title: 'Product Hunt',
-    href: 'https://www.producthunt.com/@jason_macfarlane',
-    target: '_blank',
-    icon: 'fa-brands fa-product-hunt',
-  },
-])
+import SocialLinks from './SocialLinks.vue'
 </script>
 
 <template>
   <div class="intro">
+    <div class="intro__bg" />
     <div class="container">
-      <div class="intro__inner">
-        <div class="intro__content">
-          <h1>Hey, I’m&nbsp;Jason</h1>
-          <h2>Full-stack engineer</h2>
+      <div class="intro__content">
+        <h1>Hey, I’m&nbsp;Jason</h1>
+        <h2>Full-Stack engineer</h2>
 
-          <p>
-            I’m a full-stack developer specializing in front-end, passionate
-            about building outstanding, inclusive user experiences. I’m currently
-            a front-end engineer at
-            <a
-              class="link"
-              href="https://springfinancial.ca"
-              target="_blank"
-            >Spring Financial</a> and creator of
-            <a
-              class="link"
-              href="https://webcode.tools"
-              target="_blank"
-            >Web Code Tools</a>.
-          </p>
+        <p>
+          I’m a full-stack developer specializing in front-end, passionate
+          about building outstanding, inclusive user experiences. I’m currently
+          a front-end engineer at
+          <a
+            class="link"
+            href="https://springfinancial.ca"
+            target="_blank"
+          >Spring Financial</a> and creator of
+          <a
+            class="link"
+            href="https://webcode.tools"
+            target="_blank"
+          >Web Code Tools</a>.
+        </p>
 
-          <p>
-            <small>Based in Toronto, Canada.</small>
-          </p>
+        <span class="intro__base">Based in Toronto, Canada.</span>
 
-          <div class="intro__links">
-            <a
-              class="intro__links-btn"
-              href="/resume.pdf"
-              target="_blank"
-            >
-              Résumé
-            </a>
-
-            <ul class="intro__social">
-              <li
-                v-for="(item, index) of socialLinks"
-                :key="index"
-              >
-                <a
-                  :href="item.href"
-                  :target="item.target"
-                  :title="item.title"
-                >
-                  <font-awesome-icon
-                    :icon="item.icon"
-                    aria-hidden="true"
-                  />
-
-                  <span class="sr-only">
-                    {{ item.title }}
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="intro__memoji">
-          <img
-            src="/img/portrait.png"
-            alt=""
+        <div class="intro__links">
+          <a
+            class="intro__links-btn"
+            href="/Resume%20%E2%80%93%C2%A0Jason%20Macfarlane.pdf"
+            target="_blank"
           >
+            Résumé
+          </a>
+
+          <SocialLinks class="intro__social" />
         </div>
       </div>
     </div>
@@ -103,10 +46,10 @@ const socialLinks = ref([
 
 <style scoped lang="scss">
 .intro {
-  @apply flex flex-col items-center;
+  @apply flex flex-col flex-1 items-start justify-start relative;
 
   @screen md {
-    @apply flex-row;
+    @apply flex-row items-center justify-end;
   }
 
   h1 {
@@ -122,20 +65,35 @@ const socialLinks = ref([
   }
 }
 
-.intro__inner {
-  @apply flex flex-col-reverse items-center justify-between mx-auto relative;
+.intro__bg {
+  @apply bg-cover bg-right-top bg-no-repeat h-60 left-0 mt-[-66px] relative w-screen;
+
+  background-image: url('/img/portrait.jpg');
+
+  &::after {
+    @apply absolute bg-black bg-opacity-70 h-full left-0 top-[0] w-full;
+
+    backdrop-filter: grayscale(100%);
+    content: '';
+  }
 
   @screen md {
-    @apply flex-row-reverse;
+    @apply absolute mt-0 top-[-88px];
+
+    height: calc(100% + 88px);
   }
 }
 
 .intro__content {
-  @apply py-10 w-full;
+  @apply py-10 z-40;
 
   @screen md {
-    @apply py-20 w-3/5;
+    @apply ml-auto py-20 max-w-[700px] relative w-full;
   }
+}
+
+.intro__base {
+  @apply block font-mono mb-8;
 }
 
 .intro__links {
@@ -160,26 +118,6 @@ const socialLinks = ref([
 
   @screen md {
     @apply mb-0;
-  }
-
-  &:hover li::after {
-    @apply bg-sky-500;
-  }
-
-  a {
-    @apply block duration-300;
-
-    &:hover {
-      @apply text-sky-500;
-    }
-  }
-}
-
-.intro__memoji {
-  @apply flex-1 pointer-events-none relative;
-
-  img {
-    @apply max-w-full;
   }
 }
 </style>
