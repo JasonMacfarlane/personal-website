@@ -25,6 +25,7 @@ import {
 import App from './App.vue'
 
 import About from './pages/About.vue'
+import Contact from './pages/Contact.vue'
 import Experience from './pages/Experience.vue'
 
 library.add(
@@ -48,6 +49,10 @@ const routes = [
   {
     path: '/',
     component: About,
+  },
+  {
+    path: '/contact',
+    component: Contact,
   },
   {
     path: '/experience',

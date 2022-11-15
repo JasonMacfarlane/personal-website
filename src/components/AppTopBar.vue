@@ -16,6 +16,10 @@ const links = [
     title: 'Experience',
     to: '/experience',
   },
+  {
+    title: 'Contact',
+    to: '/contact',
+  },
 ]
 
 const isMenuOpen = ref(false)
@@ -105,6 +109,8 @@ window.onscroll = () => {
 .topbar {
   @apply h-[64px] opacity-0 px-6 py-3 relative sticky top-0 z-50;
 
+  text-shadow: 0 0 10px rgba(0,0,0,1);
+
   animation: topbarIn 1s ease 0s 1 normal forwards;
   transform: translateY(-0.5em);
 
@@ -151,7 +157,7 @@ window.onscroll = () => {
   @apply flex gap-6;
 
   @screen md {
-    @apply gap-20;
+    @apply gap-16;
   }
 }
 
@@ -200,9 +206,9 @@ window.onscroll = () => {
   @apply duration-300 font-bold inline-block px-4 py-2 text-sm tracking-wider uppercase;
   @apply border border-2 border-sky-500 text-sky-500 rounded-full;
 
-    &:hover {
-      @apply bg-gray-900 -translate-y-1;
-    }
+  &:hover {
+    @apply bg-gray-900 -translate-y-1;
+  }
 }
 
 .topbar__hamburger {

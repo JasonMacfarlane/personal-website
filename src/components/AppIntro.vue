@@ -23,7 +23,12 @@ import SocialLinks from './SocialLinks.vue'
             class="link"
             href="https://webcode.tools"
             target="_blank"
-          >Web Code Tools</a>.
+          >Web Code Tools</a>. When I’m not working, I like to play piano
+          and will occasionally upload a cover to&nbsp;<a
+            class="link"
+            href="https://www.youtube.com/channel/UC17vXvjwdOFymoNEh69sDww"
+            target="_blank"
+          >YouTube</a>.
         </p>
 
         <span class="intro__base">Based in Toronto, Canada.</span>
@@ -61,7 +66,7 @@ import SocialLinks from './SocialLinks.vue'
   }
 
   p {
-    @apply text-2xl;
+    @apply leading-9 text-2xl;
   }
 }
 
@@ -71,7 +76,7 @@ import SocialLinks from './SocialLinks.vue'
   background-image: url('/img/portrait.jpg');
 
   &::after {
-    @apply absolute bg-black bg-opacity-70 h-full left-0 top-[0] w-full;
+    @apply absolute bg-black bg-opacity-60 h-full left-0 top-[0] w-full;
 
     backdrop-filter: grayscale(100%);
     content: '';
@@ -86,6 +91,8 @@ import SocialLinks from './SocialLinks.vue'
 
 .intro__content {
   @apply py-10 z-40;
+
+  text-shadow: 0 0 30px rgba(0,0,0,0.6);
 
   @screen md {
     @apply ml-auto py-20 max-w-[700px] relative w-full;

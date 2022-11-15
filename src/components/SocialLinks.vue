@@ -1,12 +1,6 @@
 <script setup lang="ts">
 const socialLinks = [
   {
-    title: 'Email me',
-    href: 'mailto:jasonmac5@gmail.com',
-    target: '_self',
-    icon: 'fa-solid fa-envelope',
-  },
-  {
     title: 'GitHub',
     href: 'https://github.com/jasonmacfarlane',
     target: '_blank',
