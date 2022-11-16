@@ -85,19 +85,27 @@ async function onFormSubmit (e: Event) {
 
 <style scoped lang="scss">
 .contact-form {
-  @apply max-w-[600px] w-full;
+  @apply rounded-xl w-full;
 
   label {
-    @apply block font-medium font-mono mb-2 text-sm text-sky-500 uppercase;
+    @apply block font-medium font-mono mb-2 text-sm text-white uppercase;
   }
 
   input,
   textarea {
-    @apply bg-transparent block border-2 border-gray-600 mb-5 p-3 text-xl w-full;
+    @apply bg-transparent block border-2 border-gray-500 mb-5 p-3 text-xl w-full;
 
     &:focus {
       @apply border-sky-500 outline-none;
     }
+  }
+
+  input {
+    @apply max-w-[600px];
+  }
+
+  textarea {
+    @apply max-w-[900px];
   }
 
   button {
