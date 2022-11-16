@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import './assets/scss/style.scss'
 import { createRouter, createWebHistory } from 'vue-router'
-import VueGtag from 'vue-gtag'
+import VueGtag, { trackRouter } from 'vue-gtag-next'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -79,10 +79,13 @@ router.beforeEach((to) => {
   document.title = to.meta.title as string ?? `${metaTitlePrefix} | Full-Stack Engineer`
 })
 
+trackRouter(router)
+
 createApp(App)
   .component('font-awesome-icon', FontAwesomeIcon)
   .use(router)
   .use(VueGtag, {
-    config: { id: 'G-R8F6P9360S' },
-  }, router)
+    property: { id: 'G-R8F6P9360S' },
+    isEnabled: process.env.NODE_ENV !== 'development',
+  })
   .mount('#app')
