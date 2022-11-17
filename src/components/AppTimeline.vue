@@ -4,7 +4,7 @@ import type { Timeline } from '../types/Timeline'
 const timeline: Timeline = [
   {
     place: 'Spring Financial',
-    title: 'Front-end Engineer',
+    title: 'Front-end engineer',
     date: 'May 2021 – Present',
     location: 'Vancouver, BC (remote)',
     note: 'Subsidiary of Canada Drives Group, Spring Financial offers personal loans and credit building products to Canadians. Our goal is to offer financial products in the easiest, quickest&nbsp;way.',
@@ -15,28 +15,25 @@ const timeline: Timeline = [
       },
     ],
     content: `
-      <p>Most recently built and led the Spring Financial website redesign/rebranding and the <a class="link" href="https://www.springfinancial.ca/apply/foundation" target="_blank">Foundation application flow</a> – an <em>almost</em> completely automated way for customers to apply and get approved for Spring’s credit building product.</p>
+      <p>Collaborate with front-end, back-end, and salesforce engineers and product owners to ship financial applications to help Canadians get personal loans or build their credit, all through automated flows.</p>
 
-      <h3>Other tasks</h3>
+      <h3>Projects</h3>
       <ul class="list">
-        <li>Built the customer dashboard with SMS verification</li>
-        <li>Integrated and designed live chat (powered by Salesforce)</li>
-        <li><mark>Coordinate deployments</mark> with DevOps engineer</li>
-        <li>A/B testing</li>
-        <li>Code reviews</li>
-        <li>Refactored legacy code</li>
-        <li><mark>Mentored</mark> junior developers</li>
+        <li><a class="link" href="https://www.springfinancial.ca/apply/foundation" target="_blank">Foundation application flow</a> – a flow for customers to apply and quickly get approved for Spring’s credit-building product</li>
+        <li>Customer self-serve dashboard, which shows the customer’s credit score, credit history, and Spring product recommendations</li>
+        <li>Develop and style live chat (powered by Salesforce) on website and application flows</li>
+        <li>Website redesign/rebranding, blog, and testimonials</li>
       </ul>
 
-      <h3>Technologies</h3>
+      <h3>Skills</h3>
       <ul>
-        <li><mark>Nuxt</mark>, <mark>Vue</mark>, HTML, SCSS, <mark>Jest</mark>, Jenkins, <mark>Figma</mark></li>
+        <li><mark>Nuxt</mark>, <mark>Vue</mark>, Jest, HTML, SCSS, Salesforce, PHP, Jenkins, <mark>Figma</mark></li>
       </ul>
     `,
   },
   {
     place: 'Web Code Tools',
-    title: 'Creator',
+    title: 'Creator & full-stack developer',
     date: 'April 2014 – Present',
     links: [
       {
@@ -46,15 +43,15 @@ const timeline: Timeline = [
     ],
     note: 'Website code generator for beginning web developers or anyone who needs a reminder on&nbsp;syntax.',
     content: `
-      <p>Developed and designed a web code generator for beginning web developers to learn HTML, CSS and Schema.org markup to improve <mark>SEO</mark> and user experience.</p>
+      <p>Developed and designed a web code generator for beginning web developers to learn HTML, CSS, and Schema.org markup to improve <mark>SEO</mark> and user experience.</p>
       <ul class="list">
         <li><a class="link" href="https://www.producthunt.com/posts/web-code-tools-2" target="_blank">#1 Product of the Day</a> on Product Hunt — May 21, 2017</li>
         <li><mark>60K+ users</mark>, <mark>185K+ page-views</mark> per month as of November 2022</li>
       </ul>
 
-      <h3>Technologies</h3>
+      <h3>Skills</h3>
       <ul>
-        <li>Nuxt, Vue, <mark>Node.js</mark>, HTML, SCSS, Google Analytics, GTM, Ezoic</li>
+        <li>Nuxt, Vue, <mark>Node.js</mark>, HTML, SCSS, Google Analytics, GTM</li>
       </ul>
     `,
   },
@@ -70,8 +67,7 @@ const timeline: Timeline = [
       },
     ],
     content: `
-      <p>Worked alongside top-tier designers to build responsive, <mark>WCAG Level AA</mark> compliant, interactive websites for big companies. These websites include annual reports, sustainability reports and corporate websites.</p>
-      <h3>Project specifics</h3>
+      <p>Worked with top-tier designers to build responsive, <mark>WCAG Level AA</mark> compliant, interactive websites for large corporations. These include annual reports, sustainability reports, and corporate websites.</p>
       <ul class="list">
         <li>Cross-browser testing in IE11, Edge, Chrome, Firefox and Safari</li>
         <li>UI/UX planning and recommendations</li>
@@ -82,15 +78,15 @@ const timeline: Timeline = [
         <li>Newmont, New Gold, GTAA, Corby Spirits and Wine, Maple Leaf Foods, Sherritt</li>
       </ul>
 
-      <h3>Technologies</h3>
+      <h3>Skills</h3>
       <ul class="list">
-        <li>HTML, CSS & SCSS, <mark>JavaScript</mark>, <mark>PHP</mark>, <mark>MySQL</mark>, Adobe XD, Adobe Photoshop, Webpack</li>
+        <li>HTML, CSS & SCSS, <mark>JavaScript</mark>, <mark>PHP</mark>, <mark>MySQL</mark>, Adobe XD, Adobe Photoshop</li>
       </ul>
     `,
   },
   {
     place: 'Personalized phone case e-commerce store',
-    title: 'Owner & Creator',
+    title: 'Owner & developer',
     date: 'July 2019 – April 2020',
     links: [
       {
@@ -106,11 +102,38 @@ const timeline: Timeline = [
     ],
     note: 'Store closed due to not having enough time to run it. Code is&nbsp;open-source.',
     content: `
-      <p>Designed and developed a Shopify store selling personalized wallet phone cases. Used Angular, Angular Material and the <mark>Shopify JS SDK</mark>, <mark>Shopify Admin GraphQL API</mark> and the <mark>Shopify Storefront API</mark>. This approach allowed for maximum flexibility, like custom checkout pages and tailored landing pages based on the user’s interests from targeted ads.</p>
+      <p>Designed and developed a print-on-demand Shopify store selling personalized wallet phone cases. Used Angular, Angular Material and the <mark>Shopify JS SDK</mark>, <mark>Shopify Admin GraphQL API</mark>, and the <mark>Shopify Storefront API</mark>. This approach allowed for maximum flexibility, like custom checkout pages and tailored landing pages based on the user’s interests from targeted ads.</p>
       <ul class="list">
-        <li>Developed a product customizer with preview using Angular, <mark>TypeScript</mark> and the Node.js image processing library Sharp. This method allowed customers to upload an image of their choice and preview it on a phone case to increase conversion rate and to give the customer an accurate representation of their product.</li>
-        <li>Developed <mark>custom checkout pages</mark> and integrated <mark>Stripe</mark> and <mark>PayPal</mark> due to the limitations of the regular Shopify plan not allowing checkout page modifications.</li>
-        <li>Successfully tested early versions with real customers and sales using <mark>Facebook ads</mark>.</li>
+        <li>Developed a product customizer with real-time product previews to give the customer an accurate representation of their product and increase the conversion rate</li>
+        <li>Used the image processing library Sharp to optimize images that customers upload</li>
+        <li>Developed custom checkout pages to allow for custom, dynamic product images during checkout (usually not possible without paying for Shopify Plus)</li>
+        <li>Integrated <mark>Stripe</mark> and <mark>PayPal</mark> for checkout options</li>
+        <li>Successfully tested early versions with real customers and sales using Facebook ads</li>
+      </ul>
+
+      <h3>Skills</h3>
+      <ul class="list">
+        <li>Angular, Shopify Admin API, Stripe API, PayPal API, HTML, SCSS, Google Analytics</li>
+      </ul>
+    `,
+  },
+  {
+    place: 'Freelance web developer',
+    title: 'Self-employed',
+    date: 'June 2013 – March 2020',
+    content: `
+      <p>Worked on various small projects for clients around the world, including:</p>
+      <ul class="list">
+        <li>Built & optimized websites in various industries, from local gyms, to cruise boat tours in France, to web hosting companies</li>
+        <li>Developed a custom Shopify store for a local doughnut delivery business</li>
+        <li>Customized Shopify templates and developed plugins</li>
+        <li>Built an online portal using Shopify JS and the Shopify Storefront API for a local pet store so customers can order online (Shopify JS and Shopify Storefront API)</li>
+        <li>Built an API and dashboard for a startup in the caregiving space</li>
+      </ul>
+
+      <h3>Skills</h3>
+      <ul class="list">
+        <li>HTML, CSS, Shopify Admin API, Shopify Storefront API, Liquid, JavaScript, Node.js, Angular, Vue, Nuxt, PHP, WordPress</li>
       </ul>
     `,
   },
